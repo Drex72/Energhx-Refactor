@@ -176,7 +176,8 @@ const InstallerWorkExperience = ({ moveBackward, moveForward }) => {
     <div>
       <div
         className={`mb-[2em] ${style.heading}`}
-        style={{ marginBottom: "2em" }}>
+        style={{ marginBottom: "2em" }}
+      >
         <p className="text-[#CDCDCD]">
           Provide the needed qualifications and details needed.
         </p>
@@ -196,13 +197,15 @@ const InstallerWorkExperience = ({ moveBackward, moveForward }) => {
               {installerData.workExperience_names?.map((workExperience) => (
                 <div
                   key={workExperience}
-                  className="py-[.5em] flex items-center justify-between px-[1.4em] rounded-[10px] bg-[#2DAD00] border-[.2px] border-[#2DAD00]  text-[#FFF]">
+                  className="py-[.5em] flex items-center justify-between px-[1.4em] rounded-[10px] bg-[#2DAD00] border-[.2px] border-[#2DAD00]  text-[#FFF]"
+                >
                   {`${workExperience?.slice(0, 4)}...`}
                   <span
                     className="cursor-pointer"
                     onClick={() =>
                       handleDeleteFromWorkExperience(workExperience)
-                    }>
+                    }
+                  >
                     <CloseOutlined />
                   </span>
                 </div>
@@ -211,7 +214,8 @@ const InstallerWorkExperience = ({ moveBackward, moveForward }) => {
             <div className="w-[20%] hidden md:block   ">
               <button
                 className="text-[1rem] text-[#fff] p-[.5em] bg-[#2DAD00] w-full rounded-[5px]"
-                onClick={() => setAddNewWorkExperience(!addNewWorkExperience)}>
+                onClick={() => setAddNewWorkExperience(!addNewWorkExperience)}
+              >
                 {addNewWorkExperience ? "Close" : "Add"}
               </button>
             </div>
@@ -219,7 +223,8 @@ const InstallerWorkExperience = ({ moveBackward, moveForward }) => {
           <div className="w-[100%] block md:hidden ">
             <button
               className="text-[1rem] text-[#fff] p-[.5em] bg-[#2DAD00] w-full rounded-[5px]"
-              onClick={() => setAddNewWorkExperience(!addNewWorkExperience)}>
+              onClick={() => setAddNewWorkExperience(!addNewWorkExperience)}
+            >
               {addNewWorkExperience ? "Close" : "Add"}
             </button>
           </div>
@@ -291,7 +296,8 @@ const InstallerWorkExperience = ({ moveBackward, moveForward }) => {
               </div>
               <button
                 className="text-[1rem] mt-[2em] self-end text-[#fff] p-[1em] bg-[#2DAD00] w-full rounded-[5px]"
-                onClick={handleCreateNewExperience}>
+                onClick={handleCreateNewExperience}
+              >
                 Add Experience
               </button>
             </div>
@@ -307,11 +313,13 @@ const InstallerWorkExperience = ({ moveBackward, moveForward }) => {
               {installerData.publications_details?.map((data) => (
                 <div
                   key={data}
-                  className="py-[.5em] flex items-center justify-between px-[1.4em] rounded-[10px] bg-[#2DAD00] border-[.2px] border-[#2DAD00]  text-[#FFF]">
+                  className="py-[.5em] flex items-center justify-between px-[1.4em] rounded-[10px] bg-[#2DAD00] border-[.2px] border-[#2DAD00]  text-[#FFF]"
+                >
                   {`${data?.slice(0, 4)}...`}
                   <span
                     className="cursor-pointer"
-                    onClick={() => handleDeleteFromPublications(data)}>
+                    onClick={() => handleDeleteFromPublications(data)}
+                  >
                     <CloseOutlined />
                   </span>
                 </div>
@@ -320,7 +328,8 @@ const InstallerWorkExperience = ({ moveBackward, moveForward }) => {
             <div className="w-[20%] hidden md:block   ">
               <button
                 className="text-[1rem] text-[#fff] p-[.5em] bg-[#2DAD00] w-full rounded-[5px]"
-                onClick={() => setAddNewPublication(!addNewPublication)}>
+                onClick={() => setAddNewPublication(!addNewPublication)}
+              >
                 {addNewPublication ? "Close" : "Add"}
               </button>
             </div>
@@ -328,7 +337,8 @@ const InstallerWorkExperience = ({ moveBackward, moveForward }) => {
           <div className="w-[100%] block md:hidden ">
             <button
               className="text-[1rem] text-[#fff] p-[.5em] bg-[#2DAD00] w-full rounded-[5px]"
-              onClick={() => setAddNewPublication(!addNewPublication)}>
+              onClick={() => setAddNewPublication(!addNewPublication)}
+            >
               {addNewPublication ? "Close" : "Add"}
             </button>
           </div>
@@ -371,7 +381,8 @@ const InstallerWorkExperience = ({ moveBackward, moveForward }) => {
 
               <button
                 className="text-[1rem] mt-[2em] self-end text-[#fff] p-[1em] bg-[#2DAD00] w-full rounded-[5px]"
-                onClick={handleCreateNewPublication}>
+                onClick={handleCreateNewPublication}
+              >
                 Add Publication
               </button>
             </div>
@@ -385,11 +396,13 @@ const InstallerWorkExperience = ({ moveBackward, moveForward }) => {
               {installerData.recommendations?.map((data) => (
                 <div
                   key={data}
-                  className="py-[.5em] flex items-center justify-between px-[1.4em] rounded-[10px] bg-[#2DAD00] border-[.2px] border-[#2DAD00]  text-[#FFF]">
+                  className="py-[.5em] flex items-center justify-between px-[1.4em] rounded-[10px] bg-[#2DAD00] border-[.2px] border-[#2DAD00]  text-[#FFF]"
+                >
                   {`${data?.slice(0, 4)}...`}
                   <span
                     className="cursor-pointer"
-                    onClick={() => handleDeleteFromRecommendations(data)}>
+                    onClick={() => handleDeleteFromRecommendations(data)}
+                  >
                     <CloseOutlined />
                   </span>
                 </div>
@@ -398,7 +411,8 @@ const InstallerWorkExperience = ({ moveBackward, moveForward }) => {
             <div className="w-[20%] hidden md:block   ">
               <button
                 className="text-[1rem] text-[#fff] p-[.5em] bg-[#2DAD00] w-full rounded-[5px]"
-                onClick={() => setAddNewRecommendation(!addNewRecommendation)}>
+                onClick={() => setAddNewRecommendation(!addNewRecommendation)}
+              >
                 {addNewRecommendation ? "Close" : "Add"}
               </button>
             </div>
@@ -406,7 +420,8 @@ const InstallerWorkExperience = ({ moveBackward, moveForward }) => {
           <div className="w-[100%] block md:hidden ">
             <button
               className="text-[1rem] text-[#fff] p-[.5em] bg-[#2DAD00] w-full rounded-[5px]"
-              onClick={() => setAddNewRecommendation(!addNewRecommendation)}>
+              onClick={() => setAddNewRecommendation(!addNewRecommendation)}
+            >
               {addNewRecommendation ? "Close" : "Add"}
             </button>
           </div>
@@ -425,7 +440,8 @@ const InstallerWorkExperience = ({ moveBackward, moveForward }) => {
 
               <button
                 className="text-[1rem] mt-[2em] self-end text-[#fff] p-[1em] bg-[#2DAD00] w-full rounded-[5px]"
-                onClick={handleCreateNewRecommendation}>
+                onClick={handleCreateNewRecommendation}
+              >
                 Add Recommendation
               </button>
             </div>
@@ -435,23 +451,28 @@ const InstallerWorkExperience = ({ moveBackward, moveForward }) => {
         <div>
           <h3 className="text-[#CDCDCD] text-xl mt-[2em]">Biography</h3>
           <div className="w-[100%] flex flex-col items-end p-[.5em] rounded-[10px] text-[black] outline-none mt-[1em] mb-[1em] mx-[0] bg-[white]  ">
-            <div className="overflow-x-scroll mb-6 w-[100%] overflow-y-hidden flex items-end gap-2 rounded-[10px]">
+            <div className="overflow-x-hidden mb-6 w-[100%] overflow-y-hidden flex items-end gap-2 rounded-[10px]">
               <textarea
                 rows="6"
                 cols="50"
-                className="w-full"
+                className="w-full outline-none"
                 readOnly={!biographyAdded}
                 value={biography}
                 onChange={(e) => setBiography(e.target.value)}
               />
-              {!biographyAdded && <EditIcon className="text-[#2DAD00]" onClick={ () => setBiographyAdded(true)} />}
+              {!biographyAdded && (
+                <EditIcon
+                  className="text-[#2DAD00]"
+                  onClick={() => setBiographyAdded(true)}
+                />
+              )}
             </div>
             <div className="w-[20%] hidden md:block   ">
               <button
                 className="text-[1rem] text-[#fff] p-[.5em] bg-[#2DAD00] w-full rounded-[5px]"
                 onClick={addNewBiography}
-                disabled={biography === ''}
-                >
+                disabled={biography === ""}
+              >
                 {biographyAdded ? "Add" : "Added"}
               </button>
             </div>
@@ -459,8 +480,8 @@ const InstallerWorkExperience = ({ moveBackward, moveForward }) => {
               <button
                 className="text-[1rem] text-[#fff] p-[.5em] bg-[#2DAD00] w-full rounded-[5px]"
                 onClick={addNewBiography}
-                disabled={biography === ''}
-                >
+                disabled={biography === ""}
+              >
                 {biographyAdded ? "Add" : "Added"}
               </button>
             </div>
