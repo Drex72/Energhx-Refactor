@@ -4,36 +4,37 @@ import { useForm } from "../../.././hooks/useForm";
 import BulbAccomplished from "../assets/Bulb-Accomplished.png";
 import { sendData } from "../../Forms/useFetch";
 import { useEffect } from "react";
+import { CircularProgress } from "@mui/material";
 
-const Form4 = ({moveForward,moveBackward, setLoading}) => {
-  const [data, setData] = useState({})
-  const [message, setMessage] = useState()
+const Form4 = ({ moveForward, moveBackward }) => {
+  const [data, setData] = useState({});
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState();
   const handleSubmitForm = async () => {
-    setLoading(true)
-    let datas = await sendData(data, moveForward, setLoading)
-
-    setMessage(datas)
-    
-  }
+    setLoading(true);
+    let datas = await sendData(data, moveForward);
+    setLoading(false);
+    setMessage(datas);
+  };
   useEffect(() => {
-    const formStep1 = JSON.parse(localStorage.getItem('userData'))
-    const formStep2 = JSON.parse(localStorage.getItem('userData2'))
-    const formStep3 = JSON.parse(localStorage.getItem('userData3'))
-    const formData = {...formStep1, ...formStep2, ...formStep3}
-    setData(formData)
-    localStorage.setItem('userData', JSON.stringify(formData))
-  }, [])
- 
+    const formStep1 = JSON.parse(localStorage.getItem("userData"));
+    const formStep2 = JSON.parse(localStorage.getItem("userData2"));
+    const formStep3 = JSON.parse(localStorage.getItem("userData3"));
+    const formData = { ...formStep1, ...formStep2, ...formStep3 };
+    setData(formData);
+    localStorage.setItem("userData", JSON.stringify(formData));
+  }, []);
+
   return (
     <div>
       <div className={style.heading} style={{ marginBottom: "5em" }}>
         <h2 className={style.formOneHeading}>VERIFY & SUBMIT</h2>
       </div>
-       {message && (
-            <h2 className="mb-[2em]  text-red-500 capitalize w-full text-center">
-              {message}
-            </h2>
-          )}
+      {message && (
+        <h2 className="mb-[2em]  text-red-500 capitalize w-full text-center">
+          {message}
+        </h2>
+      )}
       <div className={style.verifyInputFields}>
         <InputField
           type="text"
@@ -83,18 +84,20 @@ const Form4 = ({moveForward,moveBackward, setLoading}) => {
         </span>
       </p>
       <div className="flex  my-[1em]">
-          <button
-            onClick={() => moveBackward()}
-            children="Previous"
-            className="py-[1em] basis-[15%] px-[1.4em] border-[.2px] mr-[.7em] border-[#2DAD00] text-[#2DAD00]"
-          />
+        <button
+          onClick={() => moveBackward()}
+          children="Previous"
+          className="py-[1em] basis-[15%] px-[1.4em] border-[.2px] mr-[.7em] border-[#2DAD00] text-[#2DAD00]"
+        />
 
-          <button
-            onClick={handleSubmitForm}
-            className={`py-[1em]  basis-[50%] px-[1.4em] bg-[#2dad00] text-[#FFF]`}
-            children="Submit"
-          />
-        </div>
+        <button
+          onClick={handleSubmitForm}
+          className="py-[1em]  basis-[18%] px-[1.4em] bg-[#2ead0065] border-[.2px] border-[#2DAD00]  text-[#FFF]"
+          children={
+            loading ? <CircularProgress sx={{ color: "#2DAD00" }} /> : "Submit"
+          }
+        />
+      </div>
     </div>
   );
 };
@@ -113,7 +116,6 @@ const InputField = (props) => {
         name={name}
         children={value}
         className={style.form4Input}
-
       />
     </div>
   );

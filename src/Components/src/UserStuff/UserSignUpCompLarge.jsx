@@ -11,7 +11,6 @@ import { Dropdown } from "./Form1";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import { CloseOutlined, VisibilityOff } from "@mui/icons-material";
 
-
 function UserSignUpCompLarge({
   selectedCountry,
   setSelectedCountry,
@@ -21,7 +20,7 @@ function UserSignUpCompLarge({
 }) {
   const navigate = useNavigate();
   const [disabled, setDisabled] = useState();
-      const [passwordVisible, setPasswordVisible] = useState(false);
+  const [passwordVisible, setPasswordVisible] = useState(false);
 
   const [message, setMessage] = useState("");
   const msgRef = useRef();
@@ -84,7 +83,8 @@ function UserSignUpCompLarge({
     <main className="text-white py-[4em]">
       <form
         onSubmit={handlePageMove}
-        className=" container p-[3em] user-form-big">
+        className=" container p-[3em] user-form-big"
+      >
         <div>
           <h2 className="category-heading uppercase pb-[.5em]  text-[1.5rem] font-extrabold">
             Sign Up For User
@@ -96,7 +96,8 @@ function UserSignUpCompLarge({
           {message && (
             <h2
               ref={msgRef}
-              className="mb-[2em]  text-red-500 capitalize w-full ">
+              className="mb-[2em]  text-red-500 capitalize w-full "
+            >
               {message}
             </h2>
           )}
@@ -163,8 +164,8 @@ function UserSignUpCompLarge({
               />
             </div>
             {/* Password */}
-          
-             <div>
+
+            <div>
               <label htmlFor="email">Password</label>
 
               <div className="mt-4 bg-[white] flex items-center rounded-[10px] p-[1em] mt-[1em] mb-[1.5em] mx-0">
@@ -185,12 +186,12 @@ function UserSignUpCompLarge({
                 />
                 {passwordVisible ? (
                   <VisibilityIcon
-                    className="text-[black]"
+                    className="text-[black] cursor-pointer"
                     onClick={() => setPasswordVisible(false)}
                   />
                 ) : (
                   <VisibilityOff
-                    className="text-[black]"
+                    className="text-[black] cursor-pointer"
                     onClick={() => setPasswordVisible(true)}
                   />
                 )}
