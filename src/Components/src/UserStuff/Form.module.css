@@ -1,0 +1,152 @@
+@import url("http://fonts.cdnfonts.com/css/akira-expanded");
+@import url("http://fonts.cdnfonts.com/css/svn-gilroy");
+
+.formContainer {
+  font-family: "SVN-Gilroy", sans-serif;
+}
+
+.formOneHeading {
+  font-family: "Akira Expanded", sans-serif;
+  color: white;
+  font-size: 1.5rem;
+  margin: 2em auto 1em;
+}
+
+.formOneWelcome {
+  font-family: "SVN-Gilroy", sans-serif;
+  color: #cdcdcd;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  margin-bottom: 2em;
+}
+
+.formOneText {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2em;
+}
+
+.dropdown {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  color: #444444;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  margin-top: .6em;
+}
+
+.dropdownHeader {
+  padding: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdownBody {
+  padding: 5px;
+  border-top: 1px solid #e5e8ec;
+  display: none;
+}
+
+.dropdownBody.open {
+  display: block;
+}
+
+.dropdownItem {
+  padding: 10px;
+}
+
+.dropdownItem:hover {
+  cursor: pointer;
+}
+
+.dropdownItemDot {
+  opacity: 0;
+  color: #91a5be;
+  transition: all 0.2s ease-in-out;
+}
+
+.dropdownItemDot.selected {
+  opacity: 1;
+}
+
+.icon {
+  font-size: 13px;
+  color: #91a5be;
+  transform: rotate(0deg);
+  transition: all 0.2s ease-in-out;
+}
+
+.icon.open {
+  transform: rotate(90deg);
+}
+
+.breakSentence {
+  display: none;
+}
+
+/* -----------------4th Form----------------- */
+.form4Label {
+  text-transform: capitalize;
+  color: #cdcdcd;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 1em;
+}
+
+.form4Input {
+  outline: none;
+  padding: 1em 1.5em;
+  border-radius: 5px;
+  border: 2px solid #2dad00;
+  width: 90%;
+  font-size: 1.1rem;
+  background-color: #3A3A3A;
+  color: white;
+  overflow-x: scroll;
+}
+
+.checkField {
+  color: white;
+}
+
+.checkInputField {
+  margin-right: 1em;
+}
+
+.checkField .checkInputField:checked+label {
+  color: green;
+}
+
+@media screen and (min-width: 900px) {
+  .heading {
+    width: 70%;
+  }
+
+  .breakSentence {
+    display: flex;
+    margin-top: 0.5em;
+  }
+
+  .dropdownContainer {
+    display: flex;
+    align-items: flex-start;
+    width: 60%;
+    justify-content: space-between;
+  }
+
+  .verifyInputFields {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .form4Input {
+    width: 70%;
+  }
+}

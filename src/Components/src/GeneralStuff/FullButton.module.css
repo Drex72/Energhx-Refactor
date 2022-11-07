@@ -1,0 +1,68 @@
+.fullButton {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  margin-top: 2em;
+}
+
+.buttonMain {
+  border-radius: 8px;
+  padding: 1.5em 2em;
+  font-size: 1em;
+  font-weight: 500;
+  border-radius: 5px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  transition: all 300ms ease-in-out;
+
+  font-weight: normal;
+  cursor: pointer;
+  border: none;
+}
+.buttonInner {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.previousButton {
+  color: #2dad00;
+  background-color: #ffffff;
+  flex: 1;
+}
+.previousButton:hover {
+  background-color: #2dad00;
+  color: #ffffff;
+}
+.nextButton {
+  background-color: #2dad00;
+  color: #ffffff;
+  flex: 1;
+}
+.nextButton:hover {
+  color: #2dad00;
+  background-color: #ffffff;
+}
+.utilityButtonDesktop {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .fullButton {
+    width: 50%;
+  }
+  .utilityButtonMobile {
+    display: none;
+  }
+  .utilityButtonDesktop {
+    display: flex;
+  }
+  .previousButton {
+    flex: 1;
+  }
+  .nextButton {
+    flex: 2;
+  }
+}

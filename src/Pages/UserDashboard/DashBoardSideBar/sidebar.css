@@ -1,0 +1,13 @@
+.sidebar__list{
+    margin: 0;
+}
+
+.list-item{
+    margin: 1em 0;
+    font-weight: 700;
+}
+
+.list-item:hover,.list-item:focus{
+    opacity: .75;
+    color: #2DAD00;
+}
