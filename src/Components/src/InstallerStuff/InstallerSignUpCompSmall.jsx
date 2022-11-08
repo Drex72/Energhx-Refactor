@@ -110,7 +110,8 @@ function InstallerSignUpCompSmall({
     <main className="text-white">
       <form
         onSubmit={handlePageMove}
-        className="user-form p-[3em]  bg-[#112518]">
+        className="user-form p-[3em]  bg-[#112518]"
+      >
         <div>
           <h2 className="category-heading uppercase pb-[.5em]  text-[1.5rem] font-extrabold">
             Sign Up For Energy installer
@@ -121,7 +122,8 @@ function InstallerSignUpCompSmall({
           {message && (
             <h2
               ref={msgRef}
-              className="mb-[2em]  text-red-500 capitalize w-full ">
+              className="mb-[2em]  text-red-500 capitalize w-full "
+            >
               {message}
             </h2>
           )}
@@ -216,7 +218,24 @@ function InstallerSignUpCompSmall({
                 className="form-small-input "
               />
             </div>
-
+            <div>
+              <label htmlFor="account">Account Number</label>
+              <input
+                type="number"
+                id="account"
+                required
+                value={installerData?.accountNumber}
+                minLength="7"
+                maxLength="17"
+                onChange={(event) =>
+                  setInstallerData({
+                    ...installerData,
+                    accountNumber: event.target.value,
+                  })
+                }
+                className="form-small-input "
+              />
+            </div>
             <div>
               <label htmlFor="email">Password</label>
 
@@ -405,7 +424,8 @@ function InstallerSignUpCompSmall({
               {interestData?.map((utility) => (
                 <div
                   key={utility}
-                  className="py-[.5em] px-[1.4em] rounded-[10px] bg-[#2DAD00] border-[.2px] border-[#2DAD00]  text-[#FFF]">
+                  className="py-[.5em] px-[1.4em] rounded-[10px] bg-[#2DAD00] border-[.2px] border-[#2DAD00]  text-[#FFF]"
+                >
                   {`${utility?.slice(0, 4)}...`}
                 </div>
               ))}
